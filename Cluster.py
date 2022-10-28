@@ -39,10 +39,10 @@ drift_correction=0
 scale=8
 # precision_threshold=2
 eps_threshold=1
-minimum_locs_threshold=100
-prec_thresh=40
+minimum_locs_threshold=50
+prec_thresh=25
 
-filename_contains="FitResults"
+filename_contains="FitResults.txt"
 
 # Folders to analyse:
 root_path=r"/Users/Mathew/Documents/Current analysis/Peptide_16_PAINT/"
@@ -51,7 +51,7 @@ pathList=[]
 
 
 # pathList.append(r"/Users/Mathew/Documents/Current analysis/Synaptosomes_Peptide_PAINT/500nM/20")
-pathList.append(r"/Users/Mathew/Documents/Current analysis/Peptide_16_PAINT/SR/")
+pathList.append(r"/Users/Mathew/Documents/Current analysis/Peptide_16_PAINT/All/20/")
 
 
 #  Generate SR image (points)
@@ -352,7 +352,7 @@ def NN_cluster(num):
         
         color_plot=colors[i]
         
-        plt.scatter(x_coord_plot,y_coord_plot,100,color=color_plot)
+        plt.scatter(x_coord_plot,y_coord_plot,200,color=color_plot)
         plt.xlim(0, 160)
         plt.ylim(160,0)
     plt.savefig(path+str(num)+"_Map.pdf") 
@@ -365,7 +365,7 @@ def NN_cluster(num):
         
         color_plot=colors[i]
         
-        ax[0].scatter(x_coord_plot,y_coord_plot,100,color=color_plot)
+        ax[0].scatter(x_coord_plot,y_coord_plot,200,color=color_plot)
         ax[0].set_xlim(0,160)
         ax[0].set_ylim(160,0)
         ax[0].set_xticks([])
