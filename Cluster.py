@@ -19,23 +19,16 @@ import math
 
 # Camera settings
 Pixel_size=103.0
-camera_gain=250
-camera_sensitivity=11.5
-camera_offset=500
+
 
 # Options (set to 1 to perform)
 fit=0
-link=0
-torender=1
+
 to_cluster=1       
 
 # Settings
 image_width=512
 image_height=512
-# image_width=512
-# image_height=512
-gradient=7500
-drift_correction=0
 scale=8
 # precision_threshold=2
 eps_threshold=1
@@ -45,15 +38,13 @@ prec_thresh=25
 filename_contains="FitResults.txt"
 
 # Folders to analyse:
-root_path=r"/Users/Mathew/Documents/Current analysis/Peptide_16_PAINT/"
+root_path=r"path_to_root")
 pathList=[]
 
 
 
 # pathList.append(r"/Users/Mathew/Documents/Current analysis/Synaptosomes_Peptide_PAINT/500nM/20")
-pathList.append(r"/Users/Mathew/Documents/Current analysis/Peptide_16_PAINT/All/20/")
-
-
+pathList.append(r"path_to_file")
 #  Generate SR image (points)
 def generate_SR(coords):
     SR_plot_def=np.zeros((image_width*scale,image_height*scale),dtype=float)
@@ -396,7 +387,7 @@ for path in pathList:
                 for name in files:
                         if filename_contains in name:
                             if ".txt" in name:
-                                # if "_FitResults" not in name:
+                                if ".tif" not in name:
                                     resultsname = name
                                     print(resultsname)
     
