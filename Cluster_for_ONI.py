@@ -31,9 +31,9 @@ image_width=428
 image_height=428
 scale=8
 # precision_threshold=2
-eps_threshold=1
-minimum_locs_threshold=30
-prec_thresh=40
+eps_threshold=0.5
+minimum_locs_threshold=250
+prec_thresh=25
 
 filename_contains="FitResults.txt"
 
